@@ -1,0 +1,219 @@
+:root{
+    --white-off: #fdfdfd;
+    --blue-text: #150058;
+    --blue-text-secondary: #1f153d;
+    --btn-color: rgb(255, 116, 2);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Nunito', sans-serif;
+}
+
+.presentation{
+    width: 100%;
+    height: 70vh;
+    min-width: 32rem;
+    background: rgb(255,255,255);
+    background: linear-gradient(65deg, rgba(255,255,255,1) 4%, rgba(242,242,242,1) 37%, rgba(230,230,230,1) 90%);
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(32rem,1fr));
+    grid-auto-rows: 70vh;
+    overflow-y: hidden;
+    border-bottom: 0.1rem solid rgba(214, 214, 214, 0.808);
+}
+
+.presentation .presentation__info{
+    text-align: left;
+    width: 80%;
+    place-self: center;
+}
+
+.presentation__info h1{
+    font-size: 3.2rem;
+    color: var(--blue-text);
+    font-weight:800;
+    width: 20rem;
+}
+
+.presentation__info p{
+    font-size: 1.5rem;
+    margin-top: 2.2rem;
+    color: var(--blue-text-secondary);
+    line-height: 1.7rem;
+    font-weight: 300;
+}
+
+.presentation__info button{
+    margin-top: 2.2rem;
+    width: 17rem;
+    height: 4rem;
+    background-color: var(--btn-color);
+    border: none;
+    border-radius: 3rem;
+    color: var(--white-off);
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.5rem;
+    box-shadow: 0 0.2rem 0.5rem rgb(107, 107, 107);
+}
+.presentation__info button span{
+    padding-left: 0.5rem;
+}
+
+.presentation__info button span i{
+    padding-left: 0.5rem;
+    font-size: 1.7rem;
+}
+
+.presentation__info .info__social-media{
+    margin-top: 3rem;
+    font-size: 2.3rem;
+}
+
+.info__social-media i{
+    margin-right: 1.7rem;
+    cursor: pointer;
+    color: var(--blue-text);
+}
+
+.presentation .presentation__photo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.services-container{
+    width: 100%;
+    min-width: 32rem;
+    height: auto;
+    text-align: center;
+    padding-top: 3rem;
+    border-bottom: 0.1rem solid rgba(214, 214, 214, 0.808);
+}
+.services-container h2{
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--blue-text);
+    margin-bottom: 3rem;
+}
+.services-img{
+    max-width: 70%;
+    height: 100%;
+    margin: 0 auto 5.4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 20rem));
+    grid-template-rows: repeat(2,1fr);
+    justify-content: center;
+    gap: 1.3rem;
+}
+
+.services-img .serv-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+.services-img .serv-img:hover{
+    width: 90%;
+    height: 90%;
+    place-self: center;
+}
+
+.services-img .img-1{
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+
+.home-menu{
+    width: 100%;
+    height: auto;
+    padding-bottom: 6rem;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 24%, rgba(242,242,242,1) 63%, rgba(230,230,230,1) 100%);
+    margin-top: 3rem;
+    text-align: center;
+}
+.home-menu h2{
+    font-size: 2.2rem;
+    color: var(--blue-text);
+    font-weight: 800;
+    margin-bottom: 3rem;
+}
+.home-menu .menu-grid{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(10rem,19rem));
+    margin: 0 auto;
+    justify-content: center;
+    gap: 2rem;
+    align-content: center;
+}
+
+.menu-grid img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    object-fit: cover;
+    background-color: white;
+    border-top-left-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    border: 0.2rem solid rgba(255, 254, 254, 0);
+    box-shadow: 0 0.3rem 0.5rem 0.1rem rgb(214, 214, 214);
+    transition: all 0.4s;
+}
+
+.menu-grid img:hover{
+    background-color: #c7eaf000;
+    border-radius: 5rem;
+}
+
+@media screen and (max-width: 475px) {
+
+    .presentation__info, .presentation__photo{
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+    .presentation__photo{
+        z-index: 1;
+        opacity: 0.6;
+    }
+    .presentation__info{
+        z-index: 2;
+    }
+    .presentation__info .info__social-media{
+        margin-top: 1rem;
+    }
+    html{
+        font-size: 58%;
+    }
+    .presentation .presentation__info{
+        text-align: center;
+    }
+
+    .presentation .presentation__info h1{
+        margin: 0 auto;
+    }
+
+    .presentation__info h1, .presentation__info p{
+        text-shadow: 0 0.3rem 0.5rem rgb(255, 255, 255);
+    }
+
+    .presentation__info p{
+        font-weight: 500;
+    }
+}
+
+@media screen and (max-width: 648px) {
+    .services-img{
+        grid-template-columns: 13rem 13rem;
+    }
+}
